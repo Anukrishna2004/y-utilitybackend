@@ -25,6 +25,9 @@ app.use('/api/players', playersRouter);
 app.use('/api/teams', teamsRouter);
 app.use('/api/tournaments', tournamentsRouter);
 app.use('/api/matches', matchesRouter);
+app.get('/', (req, res) => {
+  res.send('Y-Ultimate API is running');
+});
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
